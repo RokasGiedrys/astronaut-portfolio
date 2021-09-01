@@ -1,0 +1,90 @@
+@import "../../utils/name-variables.scss";
+
+button {
+  &.resume {
+    width: 50%;
+    font-size: 2em;
+    color: $main-color;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 1em;
+    border: 1px solid $main-color;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2em;
+    font-weight: 500;
+    padding: 0.5em;
+
+    &:hover {
+      color: $white-color;
+      border-radius: 1em;
+      border: 1px solid $white-color;
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+
+    @include for-size(tablet-landscape) {
+      font-size: 1.5em;
+    }
+
+    @include for-size(tablet-portrait) {
+      font-size: 1.5em;
+    }
+
+    @include for-size(phone-only) {
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    @include for-size(small-only) {
+      font-size: 1.25em;
+    }
+
+    @include for-size(smallest-only) {
+      font-size: 1em;
+    }
+  }
+
+  &.contact {
+    font-size: 1.25em;
+    color: $main-color;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 1em;
+    border: 1px solid $main-color;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2em;
+    font-weight: 500;
+    padding: 0.5em 1em;
+
+    &:hover {
+      color: $white-color;
+      border-radius: 1em;
+      border: 1px solid $white-color;
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+
+    @include for-size(tablet-landscape) {
+    }
+
+    @include for-size(tablet-portrait) {
+    }
+
+    @include for-size(phone-only) {
+      margin: 0;
+    }
+
+    @include for-size(small-only) {
+    }
+
+    @include for-size(smallest-only) {
+    }
+  }
+}

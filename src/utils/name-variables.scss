@@ -1,0 +1,54 @@
+//colors
+$main-color: #ffda22;
+$text-color: #ffe9df;
+$highlighted-color: #ab7559;
+
+$main-background-gradient: linear-gradient(to top, #283e51, #303030);
+
+$white-color: #e6e6ea;
+$black-color: #303030;
+
+$header-background: rgba(0, 0, 0, 0.2);
+
+$hero-color: #009fb7;
+$white-text-color: #e6e6ea;
+
+$hero-text-color: #303030;
+
+$grad-color-1: #fe4a49;
+$grad-color-2: #fed766;
+$grad-color-3: #009fb7;
+
+$text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+@mixin for-size($size) {
+  @if $size == smallest-only {
+    @media screen and (max-width: 248px) {
+      @content;
+    }
+  } @else if $size == small-only {
+    @media screen and (max-width: 374px) {
+      @content;
+    }
+  } @else if $size == phone-only {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $size == tablet-portrait {
+    @media screen and (max-width: 600px) {
+      @content;
+    }
+  } @else if $size == tablet-landscape {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $size == large-desktop {
+    @media screen and (max-width: 1800px) {
+      @content;
+    }
+  }
+}

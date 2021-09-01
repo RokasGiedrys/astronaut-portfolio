@@ -1,0 +1,11 @@
+// Utilities
+@import "../../utils/name-variables.scss";
+
+.portfolio-item {
+  display: flex;
+  height: 100%;
+  width: 33%;
+  justify-content: space-evenly;
+  background-color: $main-color;
+  border: solid 1px black;
+}
