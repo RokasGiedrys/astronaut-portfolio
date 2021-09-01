@@ -64,7 +64,8 @@
       @include for-size(smallest-only) {
         margin-left: 0.5em;
       }
-
+      @include for-size(smallest-only) {
+      }
       .heading {
         display: flex;
         flex-direction: column;
@@ -123,9 +124,6 @@
             font-size: 1.5em;
             text-align: justify;
           }
-        }
-
-        @include for-size(smallest-only) {
         }
       }
 

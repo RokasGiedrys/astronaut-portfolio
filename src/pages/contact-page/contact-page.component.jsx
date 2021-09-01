@@ -11,7 +11,7 @@ const ContactPage = () => (
       </div>
       <h3 className='heading'>Get in touch</h3>
       <p className='subheading'>
-        To discuss upcoming full time roles or your projects - please email me{" "}
+        To discuss full time roles or your projects - please email me{" "}
         <a className='highlighted' href='mailto:giedrysrokas@gmail.com'>
           giedrysrokas@gmail.com
         </a>{" "}
@@ -21,7 +21,7 @@ const ContactPage = () => (
         </a>
         .
       </p>
-      <Button title='EMAIL ME' main />
+      <Button title='EMAIL ME' main link='mailto:giedrysrokas@gmail.com' />
     </div>
   </div>
 );

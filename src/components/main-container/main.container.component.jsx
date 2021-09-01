@@ -1,7 +1,8 @@
 import React from "react";
 import "../main-container/main-container.styles.scss";
-import { ReactComponent as HangingAstronaut } from "../../assets/astronaut_hanging.svg";
 import Button from "../button/button.component";
+import { ReactComponent as HangingAstronaut } from "../../assets/astronaut_hanging.svg";
+import Pdf from "../../assets/rokas_giedrys_cv_2021_pdf.pdf";
 
 const MainContainer = () => (
   <div className='main-container'>
@@ -16,7 +17,7 @@ const MainContainer = () => (
           web apps using ReactJS, WordPress and has an experience working with
           native Android.
         </div>
-        <Button title='VIEW RESUME' resume />
+        <Button title='VIEW RESUME' resume link={Pdf} target='_blank' />
       </div>
       <div className='hanging-astronaut-container'>
         <HangingAstronaut className='astronaut' />

@@ -1,11 +1,13 @@
 import React from "react";
 import "../button/button.styles.scss";
 
-const Button = ({ title, resume, contact, pdf }) => (
+const Button = ({ title, resume, contact, link, target }) => (
   <button
-    className={`${resume ? "resume" : ""}${contact ? "contact" : ""} button`}
+    className={`${resume ? "resume" : ""}${contact ? "contact" : ""} main`}
   >
-    {title}
+    <a className='highlighted' href={link} target={target}>
+      {title}
+    </a>
   </button>
 );
 
