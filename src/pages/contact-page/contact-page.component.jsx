@@ -5,16 +5,23 @@ import { ReactComponent as YogaAstronaut } from "../../assets/astronaut_yoga.svg
 
 const ContactPage = () => (
   <div className='contact-page'>
-    <div className='main-container'>
+    <div className='contact-page-container'>
       <div className='astronaut-container'>
         <YogaAstronaut className='yoga-astronaut' />
       </div>
-      <h2 className='heading'>Get in touch</h2>
+      <h3 className='heading'>Get in touch</h3>
       <p className='subheading'>
-        Contact me at giedrysrokas@gmail.com or call +447522408963 for upcoming
-        roles.
+        To discuss upcoming full time roles or your projects - please email me{" "}
+        <a className='highlighted' href='mailto:giedrysrokas@gmail.com'>
+          giedrysrokas@gmail.com
+        </a>{" "}
+        or call{" "}
+        <a className='highlighted' href='tel:+447522408963'>
+          +447522408963
+        </a>
+        .
       </p>
-      <Button title='Email me' contact />
+      <Button title='EMAIL ME' main />
     </div>
   </div>
 );
