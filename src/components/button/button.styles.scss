@@ -49,4 +49,53 @@ button {
       color: $main-color;
     }
   }
+
+  &.portfolio {
+    width: 25%;
+    font-size: 1.25em;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 0em;
+    border: 1px solid $main-color;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2em;
+    font-weight: 500;
+    padding: 0.5em;
+
+    &:hover {
+      //border-radius: 1em;
+      border: 1px solid $white-color;
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+
+    @include for-size(tablet-landscape) {
+      font-size: 1em;
+    }
+
+    @include for-size(tablet-portrait) {
+      font-size: 1em;
+    }
+
+    @include for-size(phone-only) {
+      font-size: 1em;
+      margin: 0;
+      padding: 0.5em;
+    }
+
+    @include for-size(small-only) {
+      font-size: 1em;
+    }
+
+    @include for-size(smallest-only) {
+      font-size: 1em;
+    }
+
+    .highlighted {
+      color: $main-color;
+    }
+  }
 }

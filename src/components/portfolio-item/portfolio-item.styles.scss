@@ -3,9 +3,96 @@
 
 .portfolio-item {
   display: flex;
-  height: 100%;
-  width: 33%;
-  justify-content: space-evenly;
-  background-color: $main-color;
-  border: solid 1px black;
+  height: 80vh;
+  width: 99%;
+  flex-direction: column;
+  background-color: transparent;
+
+  .title-wrapper {
+    height: 10%;
+    width: 100%;
+    //background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title {
+      text-transform: capitalize;
+      color: $white-color;
+      margin-left: 0.75em;
+      font-size: 1.75em;
+    }
+  }
+
+  .description-wrapper {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .description {
+      font-size: 1.25em;
+      color: $white-color;
+      opacity: 1;
+      margin: 1em;
+
+      @include for-size(tablet-landscape) {
+        font-size: 1em;
+        line-height: 1.2em;
+      }
+    }
+  }
+  .buttons-wrapper {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: flex-end;
+
+    .button {
+      margin: 1em;
+    }
+  }
+  .images-wrapper {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .image {
+      height: auto;
+      width: auto;
+      margin: 0 0.5em 0.5em 0em;
+
+      &:hover {
+        background-color: black;
+        opacity: 0.4;
+      }
+    }
+
+    @include for-size(large-desktop) {
+      height: 50%;
+    }
+
+    @include for-size(desktop) {
+      height: 35%;
+    }
+
+    @include for-size(tablet-landscape) {
+      height: 30%;
+      //flex-wrap: wrap;
+      //flex-direction: column;
+    }
+
+    @include for-size(tablet-portrait) {
+      height: 0%;
+      //flex-direction: column;
+      //flex-wrap: wrap;
+      //flex-direction: column;
+    }
+  }
 }

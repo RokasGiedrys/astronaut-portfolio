@@ -3,17 +3,12 @@ $main-color: #ffda22;
 $text-color: #ffe9df;
 $highlighted-color: #ab7559;
 
-$main-background-gradient: linear-gradient(to top, #291433, #030303);
+$main-background-gradient: linear-gradient(to top, #381b46, #030303);
 
 $white-color: #e6e6ea;
 $black-color: #303030;
 
 $header-background: rgba(0, 0, 0, 0.2);
-
-$hero-color: #009fb7;
-$white-text-color: #e6e6ea;
-
-$hero-text-color: #303030;
 
 $grad-color-1: #fe4a49;
 $grad-color-2: #fed766;
@@ -43,11 +38,11 @@ $text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
       @content;
     }
   } @else if $size == desktop {
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       @content;
     }
   } @else if $size == large-desktop {
-    @media screen and (max-width: 1800px) {
+    @media screen and (min-width: 1800px) {
       @content;
     }
   }

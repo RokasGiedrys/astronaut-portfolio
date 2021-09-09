@@ -1,11 +1,12 @@
 import React from "react";
 import "../portfolio-page/portfolio-page.styles.scss";
 
-import Portfolio from "../../components/portfolio/portfolio.component";
+import PortfolioContainer from "../../components/portfolio-container/portfolio-container.component";
 
 const PortfolioPage = () => (
   <div className='portfolio-page'>
-    <Portfolio />
+    {/*<Heading></Heading>*/}
+    <PortfolioContainer />
   </div>
 );
 
