@@ -3,96 +3,155 @@
 
 .portfolio-item {
   display: flex;
-  height: 80vh;
-  width: 99%;
-  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 4em 0;
+  flex-direction: row;
   background-color: transparent;
 
-  .title-wrapper {
-    height: 10%;
-    width: 100%;
-    //background-color: red;
+  .content-wrapper {
+    height: 100%;
+    width: 50%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
 
-    .title {
-      text-transform: capitalize;
-      color: $white-color;
-      margin-left: 0.75em;
-      font-size: 1.75em;
+    .title-wrapper {
+      height: 10%;
+      width: 100%;
+      //background-color: red;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .title {
+        text-transform: capitalize;
+        color: $white-color;
+        margin-left: 0.75em;
+        font-size: 1.75em;
+      }
     }
-  }
-
-  .description-wrapper {
-    height: 30%;
-    width: 100%;
-    display: flex;
-    margin-bottom: 1em;
-    justify-content: flex-start;
-    align-items: flex-start;
-
     .description {
-      font-size: 1.25em;
+      font-size: 1.5em;
+      line-height: 1.5em;
       color: $white-color;
+      height: 60%;
+      width: 100%;
       opacity: 1;
-      margin: 1em;
+      padding: 1em;
 
       @include for-size(tablet-landscape) {
         font-size: 1em;
         line-height: 1.2em;
       }
     }
-  }
-  .buttons-wrapper {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    margin-bottom: 1em;
-    justify-content: center;
-    align-items: flex-end;
 
-    .button {
-      margin: 1em;
+    .buttons-wrapper {
+      height: 30%;
+      width: 100%;
+      display: flex;
+      padding-bottom: 1em;
+      justify-content: center;
+      align-items: flex-end;
+
+      .button {
+        margin: 1em;
+      }
+
+      @include for-size(tablet-portrait) {
+        padding-bottom: 0;
+      }
     }
   }
+
   .images-wrapper {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    height: 100%;
+    width: 50%;
+    //background-color: blue;
+    margin-right: 1em;
 
     .image {
       height: auto;
-      width: auto;
-      margin: 0 0.5em 0.5em 0em;
+      width: 100%;
+      border-radius: 1em;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
 
-      &:hover {
-        background-color: black;
-        opacity: 0.4;
+  &.reverse {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 4em 0;
+    background-color: transparent;
+    flex-direction: row-reverse;
+
+    .content-wrapper {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .title-wrapper {
+        height: 10%;
+        width: 100%;
+        //background-color: red;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+          text-transform: capitalize;
+          color: $white-color;
+          margin-left: 0.75em;
+          font-size: 1.75em;
+        }
+      }
+
+      .description {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        color: $white-color;
+        height: 60%;
+        width: 100%;
+        opacity: 1;
+        padding: 1em;
+
+        @include for-size(tablet-landscape) {
+          font-size: 1em;
+          line-height: 1.2em;
+        }
+      }
+
+      .buttons-wrapper {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        padding-bottom: 1em;
+        justify-content: center;
+        align-items: flex-end;
+
+        .button {
+          margin: 1em;
+        }
+
+        @include for-size(tablet-portrait) {
+          padding-bottom: 0;
+        }
       }
     }
 
-    @include for-size(large-desktop) {
-      height: 50%;
-    }
+    .images-wrapper {
+      height: 100%;
+      width: 50%;
+      //background-color: blue;
+      margin-left: 1em;
 
-    @include for-size(desktop) {
-      height: 35%;
-    }
-
-    @include for-size(tablet-landscape) {
-      height: 30%;
-      //flex-wrap: wrap;
-      //flex-direction: column;
-    }
-
-    @include for-size(tablet-portrait) {
-      height: 0%;
-      //flex-direction: column;
-      //flex-wrap: wrap;
-      //flex-direction: column;
+      .image {
+        height: auto;
+        width: 100%;
+        border-radius: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
     }
   }
 }
