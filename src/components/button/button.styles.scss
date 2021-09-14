@@ -51,7 +51,7 @@ button {
   }
 
   &.portfolio {
-    width: 25%;
+    //width: 25%;
     font-size: 1.25em;
     text-decoration: none;
     background-color: transparent;
@@ -81,17 +81,19 @@ button {
     }
 
     @include for-size(phone-only) {
-      font-size: 1em;
+      //font-size: 1em;
+      font-size: 0.75em;
       margin: 0;
       padding: 0.5em;
     }
 
     @include for-size(small-only) {
-      font-size: 1em;
+      //font-size: 1em;
     }
 
     @include for-size(smallest-only) {
-      font-size: 1em;
+      //font-size: 1em;
+      padding: 0.5em 1em;
     }
 
     .highlighted {

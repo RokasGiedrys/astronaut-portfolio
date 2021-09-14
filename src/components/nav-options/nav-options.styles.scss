@@ -1,0 +1,64 @@
+@import "../../utils/name-variables.scss";
+
+.options {
+  height: 10vh;
+  width: 80vw;
+  display: flex;
+  margin-top: 1em;
+  justify-content: flex-end;
+
+  .option {
+    font-size: 1.5em;
+    margin: 0 1em;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    color: $main-color;
+
+    &:hover {
+      color: $white-color;
+    }
+
+    &:active {
+      color: $white-color;
+    }
+
+    @include for-size(tablet-landscape) {
+      font-size: 1.5em;
+    }
+
+    @include for-size(tablet-portrait) {
+      margin: 0;
+      height: 0;
+      width: 0;
+      font-size: 0em;
+      visibility: hidden;
+    }
+
+    @include for-size(smallest-only) {
+      margin: 0em;
+    }
+  }
+
+  .selected {
+    text-decoration: underline;
+  }
+
+  @include for-size(tablet-portrait) {
+    height: 0;
+    width: 0;
+    margin-right: 1em;
+    justify-content: space-around;
+  }
+
+  @include for-size(phone-only) {
+    padding-right: 0;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  @include for-size(smallest-only) {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
