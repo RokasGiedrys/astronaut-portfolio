@@ -1,0 +1,11 @@
+@import "../../utils/name-variables.scss";
+
+.burger {
+  width: 0;
+  height: 0;
+
+  @include for-size(tablet-portrait) {
+    width: 20%;
+    height: 100%;
+  }
+}

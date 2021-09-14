@@ -5,9 +5,11 @@ import NavOptions from "../nav-options/nav-options.components";
 
 const Burger = ({ isOpen }) => {
   return (
-    <Menu isOpen={isOpen} top>
-      <NavOptions />
-    </Menu>
+    <div className='burger'>
+      <Menu isOpen={isOpen}>
+        <NavOptions />
+      </Menu>
+    </div>
   );
 };
 export default Burger;
