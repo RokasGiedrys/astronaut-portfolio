@@ -31,8 +31,6 @@
 
         @include for-size(phone-only) {
           margin-left: 0;
-          //height: 30%;
-          //width: 30%;
         }
 
         @include for-size(smallest-only) {
@@ -57,18 +55,11 @@
       font-size: 2em;
       color: $white-color;
       font-weight: 550;
+      letter-spacing: 0.1em;
       margin-bottom: 1em;
 
-      @include for-size(tablet-landscape) {
-      }
-
-      @include for-size(tablet-portrait) {
-      }
-
-      @include for-size(phone-only) {
-      }
-
       @include for-size(small-only) {
+        font-size: 1.5em;
       }
     }
 
@@ -77,12 +68,17 @@
       line-height: 1.5em;
       color: $white-color;
       font-weight: 500;
-      text-align: justify;
+      letter-spacing: 0.1em;
       padding: 0 1em;
+      text-align: justify;
 
       @include for-size(phone-only) {
         margin-bottom: 1em;
         text-align: center;
+      }
+
+      @include for-size(small-only) {
+        font-size: 1em;
       }
 
       @include for-size(smallest-only) {

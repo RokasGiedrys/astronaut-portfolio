@@ -7,6 +7,7 @@
     color: white;
     text-align: center;
     padding: 4em 6em;
+    letter-spacing: 0.1em;
 
     @include for-size(tablet-landscape) {
     }
@@ -21,15 +22,19 @@
     }
 
     @include for-size(small-only) {
-      //padding: 4em 1em 2em 1em;
+      font-size: 1em;
       padding: 6em 2em 4em 2em;
       margin-top: 0;
     }
 
     @include for-size(smallest-only) {
       font-size: 1em;
-      padding: 5em 1em 1em 1em;
       margin-top: 0;
+    }
+
+    .highlighted {
+      color: $main-color;
+      font-style: italic;
     }
   }
 
@@ -41,4 +46,5 @@
   background: $main-background-gradient;
   overflow-y: scroll;
   scroll-behavior: smooth;
+
 }

@@ -5,8 +5,6 @@
   background: url(../../assets/stars.png) no-repeat center center fixed;
   background-size: cover;
 
-  //height: 90vh;
-
   .hero-content {
     height: 100vh;
     width: 100vw;
@@ -14,38 +12,9 @@
     flex-direction: row;
     justify-content: center;
 
-    @include for-size(phone-only) {
-      flex-direction: column;
+    @include for-size(tablet-portrait) {
+      flex-direction: column-reverse;
       justify-content: center;
-    }
-
-    .yoga-astronaut-container {
-      height: 0;
-      width: 0;
-      visibility: hidden;
-
-      @include for-size(phone-only) {
-        height: 30%;
-        width: 30%;
-        visibility: visible;
-        animation: fly 5s ease-in-out infinite;
-      }
-
-      @include for-size(smallest-only) {
-        height: 20vh;
-      }
-
-      @keyframes fly {
-        0% {
-          transform: translate(0vw, 1vh);
-        }
-        50% {
-          transform: translate(0vw, 0vh);
-        }
-        100% {
-          transform: translate(0vw, 1vh);
-        }
-      }
     }
 
     .text-container {
@@ -55,17 +24,15 @@
       width: 60%;
       margin-left: 1em;
 
-      @include for-size(phone-only) {
-        width: 100vw;
+      @include for-size(tablet-portrait) {
+        height: 60%;
+        width: 100%;
         margin-bottom: 1em;
+        padding: 0 0.5em;
+        margin-left: 0;
         justify-content: flex-end;
       }
 
-      @include for-size(smallest-only) {
-        margin-left: 0.5em;
-      }
-      @include for-size(smallest-only) {
-      }
       .heading {
         display: flex;
         flex-direction: column;
@@ -77,6 +44,7 @@
           font-size: 2em;
           font-weight: 500;
           line-height: 1em;
+          letter-spacing: 0.1em;
 
           @include for-size(tablet-landscape) {
             font-size: 1.5em;
@@ -86,20 +54,13 @@
           }
 
           @include for-size(tablet-portrait) {
-            font-size: 1.25em;
-            text-align: start;
+            text-align: center;
             padding-bottom: 0em;
             font-weight: 500;
           }
 
           @include for-size(phone-only) {
-            line-height: 1em;
-            color: $white-color;
-          }
-
-          @include for-size(small-only) {
             font-size: 1.25em;
-            line-height: 1em;
             color: $white-color;
           }
         }
@@ -107,9 +68,11 @@
         .name {
           font-size: 3em;
           color: $main-color;
+          letter-spacing: 0.1em;
 
           @include for-size(tablet-portrait) {
             font-size: 2.75;
+            text-align: center;
           }
 
           @include for-size(phone-only) {
@@ -122,7 +85,6 @@
 
           @include for-size(smallest-only) {
             font-size: 1.5em;
-            text-align: justify;
           }
         }
       }
@@ -131,49 +93,75 @@
         color: $white-color;
         font-size: 2em;
         font-weight: 500;
+        letter-spacing: 0.1em;
         text-align: justify;
 
         @include for-size(tablet-landscape) {
           text-align: start;
-        }
-
-        @include for-size(tablet-portrait) {
           font-size: 1.75em;
         }
 
-        @include for-size(phone-only) {
-          margin-right: 1em;
-          margin-bottom: 2em;
+        @include for-size(tablet-portrait) {
           font-size: 1.5em;
+          text-align: center;
+          padding: 0 1em;
+        }
+
+        @include for-size(phone-only) {
+          font-size: 1.25em;
+          padding: 0 0.5em;
         }
 
         @include for-size(small-only) {
-          font-size: 1.25em;
+          font-size: 1em;
         }
 
         .highlighted {
           color: $main-color;
         }
       }
+
+      .button-wrapper {
+        @include for-size(tablet-portrait) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
 
     .hanging-astronaut-container {
-      width: 40vw;
-      height: 100vh;
+      width: 40%;
+      height: 100%;
       display: flex;
       justify-content: center;
-      margin-top: 1em;
+      margin-top: 2em;
 
-      @include for-size(phone-only) {
-        height: 0;
-        width: 0;
-        visibility: hidden;
+      @include for-size(tablet-portrait) {
+        height: 40%;
+        width: 100%;
+        margin-top: 3em;
       }
 
       .astronaut {
         height: 80vh;
         width: 80vw;
         animation: swing 5s ease-in-out infinite;
+
+        @include for-size(tablet-portrait) {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include for-size(phone-only) {
+          width: 100%;
+          height: 100%;
+        }
+
+        @include for-size(small-only) {
+          width: 100%;
+          height: 100%;
+        }
 
         @keyframes swing {
           0% {

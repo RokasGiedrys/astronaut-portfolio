@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../nav-options/nav-options.styles.scss";
+import "../navigation/navigation.styles.scss";
 
-const NavOptions = () => (
+const Navigation = () => (
   <div className='options'>
     <NavLink exact to='/' className='option' activeClassName='selected'>
       HOME
@@ -20,4 +20,4 @@ const NavOptions = () => (
     </NavLink>
   </div>
 );
-export default NavOptions;
+export default Navigation;

@@ -1,0 +1,58 @@
+@import "../../utils/name-variables.scss";
+
+.mobile-navigation {
+  height: 0;
+  width: 0;
+
+  @include for-size(tablet-portrait) {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include for-size(small-only) {
+    height: 1.5em;
+    width: 1.5em;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include for-size(small-only) {
+    font-size: 0.75em;
+  }
+
+  @include for-size(smallest-only) {
+    width: 80%;
+    height: 100%;
+    //margin: 1em 0;
+    margin-right: 0.5em;
+  }
+
+  .menu-option {
+    @include for-size(tablet-portrait) {
+      width: 100%;
+      font-size: 1em;
+      cursor: pointer;
+      color: $main-color;
+      text-align: right;
+      letter-spacing: 0.1em;
+
+      &:hover {
+        color: $white-color;
+      }
+
+      &:active {
+        color: $white-color;
+      }
+    }
+  }
+
+  .selected {
+    text-decoration: underline;
+  }
+}

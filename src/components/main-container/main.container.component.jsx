@@ -13,11 +13,13 @@ const MainContainer = () => (
           <span className='name'>Rokas Giedrys</span>
         </div>
         <div className='subheading'>
-          front-end web developer based in Cambridge, UK who creates websites &
-          web apps using ReactJS, WordPress and has an experience working with
-          native Android.
+          front-end web developer based in Cambridge, UK who creates web apps
+          using ReactJS and has experience working with WordPress and native
+          Android.
         </div>
-        <Button title='VIEW RESUME' resume link={Pdf} target='_blank' />
+        <div className='button-wrapper'>
+          <Button title='VIEW RESUME' resume link={Pdf} target='_blank' />
+        </div>
       </div>
       <div className='hanging-astronaut-container'>
         <HangingAstronaut className='astronaut' />

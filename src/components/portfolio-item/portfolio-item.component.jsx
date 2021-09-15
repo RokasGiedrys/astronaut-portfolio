@@ -20,7 +20,6 @@ const PortfolioItem = ({ title, description, images, linkUrl, reverse }) => {
   };
   return (
     <div className={`${reverse ? "reverse" : ""} portfolio-item`}>
-      {/*<img src='' alt='project image' className='project-image' />*/}
       <div className='content-wrapper'>
         <div className='title-wrapper'>
           <div className='title'>{title}</div>

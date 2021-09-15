@@ -10,12 +10,6 @@ $black-color: #303030;
 
 $header-background: rgba(0, 0, 0, 0.5);
 
-$grad-color-1: #fe4a49;
-$grad-color-2: #fed766;
-$grad-color-3: #009fb7;
-
-$text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
 @mixin for-size($size) {
   @if $size == smallest-only {
     @media screen and (max-width: 248px) {

@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "../header/header.styles.scss";
-import { Link, NavLink } from "react-router-dom";
-import { GrLinkedinOption } from "react-icons/gr";
-import { GrGithub } from "react-icons/gr";
-import { CgMenuRound } from "react-icons/cg";
-import NavOptions from "../nav-options/nav-options.components";
+import { Link } from "react-router-dom";
+import { GrLinkedinOption, GrGithub } from "react-icons/gr";
+import Navigation from "../navigation/navigation.component";
+import MobileNavigation from "../mobile-navigation/mobile-navigation.component";
 
 const Header = () => {
   return (
     <div className='header'>
-      <div className='buttons-container'>
+      <div className='buttons-wrapper'>
         <div className='soc-button-wrapper'>
           <Link
             to={{
@@ -28,40 +27,9 @@ const Header = () => {
             <GrGithub className='soc-button' />
           </Link>
         </div>
-        {/*<CgMenuRound
-          className='menu-button'
-          onClick={() => {
-            setOpen(!open);
-          }}
-        />*/}
-        <div className='mobile-menu'>
-          <NavLink
-            exact
-            to='/'
-            className='menu-option'
-            activeClassName='selected'
-          >
-            HOME
-          </NavLink>
-          <NavLink
-            exact
-            to='/portfolio'
-            className='menu-option'
-            activeClassName='selected'
-          >
-            PORTFOLIO
-          </NavLink>
-          <NavLink
-            exact
-            to='/contact'
-            className='menu-option'
-            activeClassName='selected'
-          >
-            CONTACT
-          </NavLink>
-        </div>
+        <MobileNavigation />
       </div>
-      <NavOptions />
+      <Navigation />
     </div>
   );
 };

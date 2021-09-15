@@ -9,13 +9,10 @@
   flex-direction: row;
   background: $header-background;
 
-  @include for-size(tablet-portrait) {
-  }
-
   @include for-size(smallest-only) {
     flex-direction: column;
   }
-  .buttons-container {
+  .buttons-wrapper {
     height: 100%;
     width: 20%;
     display: flex;
@@ -23,13 +20,6 @@
     justify-content: flex-start;
     margin-top: 1em;
     margin-left: 1em;
-
-    a {
-      @include for-size(smallest-only) {
-        height: 0;
-        width: 0;
-      }
-    }
 
     :first-child {
       margin-right: 1em;
@@ -48,6 +38,10 @@
       justify-content: center;
       padding: 0;
       margin: 0;
+
+      :first-child {
+        margin-right: 0;
+      }
     }
     .soc-button-wrapper {
       width: 50%;
@@ -56,6 +50,12 @@
       @include for-size(tablet-portrait) {
         flex-direction: column;
         justify-content: space-evenly;
+      }
+
+      @include for-size(smallest-only) {
+        width: 20%;
+        align-items: center;
+        flex-direction: column;
       }
     }
     .soc-button {
@@ -80,95 +80,12 @@
       }
 
       @include for-size(small-only) {
-        height: 1.5em;
-        width: 1.5em;
+        height: 1em;
+        width: 1em;
       }
 
       @include for-size(smallest-only) {
-        margin-top: 1em;
-        height: 0;
-        width: 0;
-        visibility: hidden;
-      }
-    }
-
-    //    .menu-button {
-    //      height: 0;
-    //      width: 0;
-    //
-    //      @include for-size(tablet-portrait) {
-    //        height: 2em;
-    //        width: 2em;
-    //        color: $main-color;
-    //        cursor: pointer;
-    //        margin-left: auto;
-    //
-    //        @include for-size(small-only) {
-    //          height: 1.5em;
-    //          width: 1.5em;
-    //        }
-    //
-    //        @include for-size(smallest-only) {
-    //          height: 2em;
-    //          width: 2em;
-    //          //margin-top: 1em;
-    //          //margin-left: 0;
-    //          //justify-content: flex-end;
-    //          margin: 1em 0;
-    //        }
-    //
-    //        &:hover {
-    //          color: $white-color;
-    //        }
-    //
-    //        &:active {
-    //          color: $white-color;
-    //        }
-    //      }
-    //    }
-
-    .mobile-menu {
-      height: 0;
-      width: 0;
-
-      @include for-size(tablet-portrait) {
-        height: 100%;
-        width: 50%;
-        display: flex;
-        //margin-right: 0;
-        flex-direction: column;
-        justify-content: center;
-        //margin-left: auto;
-      }
-
-      @include for-size(small-only) {
-        height: 1.5em;
-        width: 1.5em;
-      }
-
-      @include for-size(smallest-only) {
-        height: 2em;
-        width: 2em;
-        //margin-top: 1em;
-        //margin-left: 0;
-        //justify-content: flex-end;
-        margin: 1em 0;
-      }
-
-      .menu-option {
-        @include for-size(tablet-portrait) {
-          width: 100%;
-          font-size: 1em;
-          cursor: pointer;
-          color: $main-color;
-          text-align: right;
-          //margin-right: 0;
-          letter-spacing: 0.1em;
-        }
-      }
-
-      .selected {
-        text-decoration: underline;
+        margin-right: 1em;
       }
     }
   }
