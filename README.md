@@ -1,10 +1,10 @@
 # This project is the source code for my portfolio website built with React
 
 ## Built with
-React - The web framework used
-react-router - Used to convert React into a multi-page web application
-react-slick & slick-corousel - Used to display portfolio project images in carousels
-react-icons - For LinkedIn and Github icons.
+- React - The web framework used
+- react-router - Used to convert React into a multi-page web application
+- react-slick & slick-corousel - Used to display portfolio project images in carousels
+- react-icons - For LinkedIn and Github icons.
 
 # Getting Started with Create React App
 
