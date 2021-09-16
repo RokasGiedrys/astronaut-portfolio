@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import Header from "./components/header/header.component";
 import HomePage from "./pages/home-page/home-page.component";
 import PortfolioPage from "./pages/portfolio-page/portfolio-page.component";
@@ -9,11 +9,13 @@ function App() {
   return (
     <div>
       <Header />
-      <Switch>
-        <Route path='/' component={HomePage} />
-        <Route exact path='/projects' component={PortfolioPage} />
-        <Route exact path='/contact' component={ContactPage} />
-      </Switch>
+      <HashRouter basename='/'>
+        <Switch>
+          <Route path='/' component={HomePage} />
+          <Route exact path='/projects' component={PortfolioPage} />
+          <Route exact path='/contact' component={ContactPage} />
+        </Switch>
+      </HashRouter>
     </div>
   );
 }
