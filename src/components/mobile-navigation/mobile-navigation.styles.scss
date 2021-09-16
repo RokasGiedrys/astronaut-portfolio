@@ -23,7 +23,7 @@
   }
 
   @include for-size(small-only) {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   @include for-size(smallest-only) {
@@ -41,6 +41,9 @@
       color: $main-color;
       text-align: right;
       letter-spacing: 0.1em;
+
+      @include for-size(phone-only) {
+       font-size: 1em;
 
       &:hover {
         color: $white-color;
