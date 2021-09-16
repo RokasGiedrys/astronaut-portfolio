@@ -1,5 +1,5 @@
 import "./App.css";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/header/header.component";
 import HomePage from "./pages/home-page/home-page.component";
 import PortfolioPage from "./pages/portfolio-page/portfolio-page.component";
@@ -10,11 +10,17 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <HashRouter basename='/'>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/projects' component={PortfolioPage} />
-          <Route exact path='/contact' component={ContactPage} />
-        </HashRouter>
+        <Route exact path={process.env.PUBLIC_URL + "/"} component={HomePage} />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/projects"}
+          component={PortfolioPage}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/contact"}
+          component={ContactPage}
+        />
       </Switch>
     </div>
   );
