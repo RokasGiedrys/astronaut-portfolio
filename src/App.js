@@ -9,13 +9,13 @@ function App() {
   return (
     <div>
       <Header />
-      <HashRouter basename='/'>
-        <Switch>
+      <Switch>
+        <HashRouter basename='/'>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/projects' component={PortfolioPage} />
           <Route exact path='/contact' component={ContactPage} />
-        </Switch>
-      </HashRouter>
+        </HashRouter>
+      </Switch>
     </div>
   );
 }
