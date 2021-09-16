@@ -11,7 +11,7 @@ function App() {
       <Header />
       <HashRouter basename='/'>
         <Switch>
-          <Route path='/' component={HomePage} />
+          <Route exact path='/' component={HomePage} />
           <Route exact path='/projects' component={PortfolioPage} />
           <Route exact path='/contact' component={ContactPage} />
         </Switch>
