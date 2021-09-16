@@ -4,12 +4,7 @@ import "../mobile-navigation/mobile-navigation.styles.scss";
 
 const MobileNavigation = () => (
   <div className='mobile-navigation'>
-    <NavLink
-      exact
-      to='/portfolio'
-      className='menu-option'
-      activeClassName='selected'
-    >
+    <NavLink exact to='/' className='menu-option' activeClassName='selected'>
       HOME
     </NavLink>
     <NavLink
