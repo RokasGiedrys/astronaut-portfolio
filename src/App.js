@@ -11,7 +11,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/portfolio' component={PortfolioPage} />
+        <Route exact path='/projects' component={PortfolioPage} />
         <Route exact path='/contact' component={ContactPage} />
       </Switch>
     </div>
