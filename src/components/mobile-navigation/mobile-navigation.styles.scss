@@ -34,8 +34,10 @@
   }
 
   .menu-option {
+    visibility: hidden;
     @include for-size(tablet-portrait) {
       width: 100%;
+      visibility: visible;
       font-size: 1em;
       cursor: pointer;
       color: $main-color;
