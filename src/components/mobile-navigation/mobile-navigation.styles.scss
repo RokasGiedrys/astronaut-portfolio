@@ -43,19 +43,20 @@
       letter-spacing: 0.1em;
 
       @include for-size(phone-only) {
-       font-size: 1em;
+        font-size: 1em;
 
-      &:hover {
-        color: $white-color;
-      }
+        &:hover {
+          color: $white-color;
+        }
 
-      &:active {
-        color: $white-color;
+        &:active {
+          color: $white-color;
+        }
       }
     }
-  }
 
-  .selected {
-    text-decoration: underline;
+    .selected {
+      text-decoration: underline;
+    }
   }
 }
