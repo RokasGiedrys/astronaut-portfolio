@@ -23,7 +23,7 @@
   }
 
   @include for-size(small-only) {
-    font-size: 0.75em;
+    font-size: 1em;
   }
 
   @include for-size(smallest-only) {
