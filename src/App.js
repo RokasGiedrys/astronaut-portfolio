@@ -10,7 +10,10 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path='/myportfolio'>
+          <Redirect to='/home' />
+        </Route>
+        <Route exact path='/home' component={HomePage} />
         <Route exact path='/projects' component={PortfolioPage} />
         <Route exact path='/contact' component={ContactPage} />
       </Switch>
