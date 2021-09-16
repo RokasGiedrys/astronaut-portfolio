@@ -8,7 +8,7 @@ $main-background-gradient: linear-gradient(to top, #381b46, #030303);
 $white-color: #e6e6ea;
 $black-color: #303030;
 
-$header-background: rgba(0, 0, 0, 0.5);
+$header-background: rgba(0, 0, 0, 0.3);
 
 @mixin for-size($size) {
   @if $size == smallest-only {

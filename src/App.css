@@ -2,7 +2,7 @@ body {
   padding: 0px 0px;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: #303030;
+  background-color: linear-gradient(to top, #381b46, #030303);
 }
 
 a {
