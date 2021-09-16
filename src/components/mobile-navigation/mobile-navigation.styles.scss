@@ -43,7 +43,7 @@
       letter-spacing: 0.1em;
 
       @include for-size(phone-only) {
-        font-size: 1em;
+        font-size: 1.25em;
 
         &:hover {
           color: $white-color;
