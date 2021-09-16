@@ -23,7 +23,7 @@
   }
 
   @include for-size(small-only) {
-    font-size: 1em;
+    font-size: 0.75em;
   }
 
   @include for-size(smallest-only) {
@@ -36,7 +36,7 @@
   .menu-option {
     @include for-size(tablet-portrait) {
       width: 100%;
-      font-size: 1.5em;
+      font-size: 1em;
       cursor: pointer;
       color: $main-color;
       text-align: right;
