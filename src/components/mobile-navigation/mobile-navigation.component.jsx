@@ -9,7 +9,7 @@ const MobileNavigation = () => (
     </NavLink>
     <NavLink
       exact
-      to='/portfolio'
+      to='/projects'
       className='menu-option'
       activeClassName='selected'
     >
