@@ -6,7 +6,7 @@
   background-size: cover;
 
   .contact-page-container {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background: url(../../assets/stars.png) no-repeat center center fixed;
     background-size: cover;
@@ -14,6 +14,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include for-size(phone-only) {
+      height: 85vh;
+    }
 
     .astronaut-container {
       height: 40%;
@@ -29,7 +33,15 @@
         margin-left: 1em;
         animation: fly 5s ease-in-out infinite;
 
+        @include for-size(tablet-portrait) {
+          height: 40%;
+          width: 100%;
+          margin-top: 4em;
+        }
+
         @include for-size(phone-only) {
+          height: 30%;
+          width: 100%;
           margin-left: 0;
         }
 
