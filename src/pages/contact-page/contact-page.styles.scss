@@ -80,11 +80,10 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       padding: 0 1em;
-      text-align: justify;
+      text-align: center;
 
       @include for-size(phone-only) {
         margin-bottom: 1em;
-        text-align: center;
       }
 
       @include for-size(small-only) {

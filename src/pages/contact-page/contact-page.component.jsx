@@ -19,7 +19,6 @@ const ContactPage = () => (
         <a className='highlighted' href='tel:+447522408963'>
           +447522408963
         </a>
-        .
       </p>
       <Button title='EMAIL ME' main link='mailto:giedrysrokas@gmail.com' />
     </div>
