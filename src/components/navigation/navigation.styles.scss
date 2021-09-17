@@ -11,8 +11,10 @@
     font-size: 1.5em;
     margin: 0 1em;
     height: 100%;
+    width: auto;
     cursor: pointer;
     font-weight: 500;
+    display: block;
     letter-spacing: 0.1em;
     color: $main-color;
 
