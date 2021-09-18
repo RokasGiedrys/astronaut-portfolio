@@ -58,15 +58,11 @@
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        padding: 1em 2em;
+        padding: 0 2em;
         align-items: center;
 
-        @include for-size(tablet-portrait) {
+        @include for-size(tablet-landscape) {
           justify-content: center;
-          padding: 0;
-        }
-
-        @include for-size(phone-only) {
         }
 
         .title {
@@ -78,6 +74,10 @@
 
           @include for-size(large-desktop) {
             font-size: 2em;
+          }
+
+          @include for-size(tablet-landscape) {
+            font-size: 1em;
           }
 
           @include for-size(tablet-portrait) {

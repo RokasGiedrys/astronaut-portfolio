@@ -12,6 +12,14 @@
   padding-top: 1em;
   background: $header-background;
 
+  :first-child {
+    margin-right: auto;
+
+    @include for-size(tablet-portrait) {
+      margin-right: 0;
+    }
+  }
+
   @include for-size(tablet-landscape) {
     padding-left: 2em;
     padding-right: 2em;
@@ -44,8 +52,10 @@
 
     :first-child {
       margin-right: 1em;
+
       @include for-size(tablet-portrait) {
         margin-right: 0;
+        flex-direction: column;
       }
     }
 
@@ -66,16 +76,16 @@
       }
     }
     .soc-container {
-      width: 100%;
       display: flex;
       flex-direction: row;
+      margin-right: auto;
+
       @include for-size(tablet-portrait) {
         flex-direction: column;
         justify-content: space-evenly;
       }
 
       @include for-size(smallest-only) {
-        width: 20%;
         align-items: center;
         flex-direction: column;
       }
@@ -89,6 +99,11 @@
 
       &:hover {
         color: $white-color;
+      }
+
+      @include for-size(tablet-landscape) {
+        height: 1em;
+        width: 1em;
       }
 
       @include for-size(tablet-portrait) {

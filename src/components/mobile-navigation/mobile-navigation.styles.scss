@@ -1,42 +1,30 @@
 @import "../../utils/name-variables.scss";
 
 .mobile-navigation {
-  height: 0;
-  width: 0;
+  visibility: hidden;
 
   @include for-size(tablet-portrait) {
-    height: 100%;
-    width: 100%;
+    visibility: visible;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
   @include for-size(small-only) {
-    height: 1.5em;
-    width: 1.5em;
-    height: 100%;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  @include for-size(small-only) {
     font-size: 0.75em;
   }
 
   @include for-size(smallest-only) {
-    width: 80%;
-    height: 100%;
-    //margin: 1em 0;
     margin-right: 0.5em;
   }
 
   .menu-option {
     visibility: hidden;
+
     @include for-size(tablet-portrait) {
-      width: 100%;
       visibility: visible;
       font-size: 1em;
       cursor: pointer;

@@ -23,6 +23,7 @@
   }
 
   @include for-size(phone-only) {
+    height: 85vh;
     margin-top: 15vh;
     padding-bottom: 2em;
   }
@@ -50,8 +51,6 @@
 
     @include for-size(phone-only) {
       height: 60%;
-      padding-top: 0;
-      justify-content: center;
     }
 
     .heading {
@@ -72,7 +71,7 @@
         }
 
         @include for-size(tablet-landscape) {
-          font-size: 1.5em;
+          font-size: 1em;
           text-align: start;
           padding-bottom: 0em;
           font-weight: 500;
@@ -103,7 +102,7 @@
         }
 
         @include for-size(tablet-landscape) {
-          font-size: 2em;
+          font-size: 1.5em;
         }
 
         @include for-size(tablet-portrait) {
@@ -141,7 +140,7 @@
       }
 
       @include for-size(tablet-landscape) {
-        font-size: 1.5em;
+        font-size: 1em;
       }
 
       @include for-size(tablet-portrait) {
@@ -168,6 +167,7 @@
     }
 
     .button-container {
+      padding-top: 2em;
       @include for-size(tablet-portrait) {
         width: 100%;
         display: flex;
@@ -180,7 +180,6 @@
     width: 60%;
     height: 100%;
     display: flex;
-    z-index: 20;
     justify-content: center;
     align-items: center;
 

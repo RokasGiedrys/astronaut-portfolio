@@ -1,17 +1,12 @@
 @import "../../utils/name-variables.scss";
 
 .options {
-  height: 10vh;
-  width: 80vw;
   display: flex;
   justify-content: flex-end;
 
   .option {
     font-size: 1.5em;
     margin-left: 1em;
-    text-align: right;
-    height: 100%;
-    width: auto;
     cursor: pointer;
     font-weight: 500;
     display: block;
@@ -27,7 +22,7 @@
     }
 
     @include for-size(tablet-landscape) {
-      font-size: 1.5em;
+      font-size: 1em;
     }
 
     @include for-size(tablet-portrait) {

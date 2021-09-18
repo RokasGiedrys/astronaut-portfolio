@@ -2,17 +2,21 @@
 @import "../../utils/name-variables.scss";
 
 .contact-page {
+  height: 90vh;
+  width: 100vw;
+  padding-top: 10vh;
   background: $main-background-gradient;
   background-size: cover;
-  padding-top: 10vh;
 
   @include for-size(phone-only) {
+    height: 85vh;
     padding-top: 15vh;
   }
 
   .contact-page-container {
-    height: 90vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +27,8 @@
       padding: 2em;
     }
 
-    @include for-size(phone-only) {
-      height: 85vh;
+    @include for-size(small-only) {
+      padding: 1em;
     }
 
     .astronaut-container {
@@ -34,6 +38,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      padding: 1em;
 
       .yoga-astronaut {
         height: 100%;
@@ -55,8 +60,8 @@
     }
 
     .contacts-container {
-      height: 60%;
-      width: 100%;
+      //height: 60%;
+      //width: 100%;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -74,6 +79,10 @@
         }
 
         @include for-size(tablet-landscape) {
+          font-size: 1em;
+        }
+
+        @include for-size(tablet-portrait) {
           font-size: 1.25em;
         }
 
@@ -95,6 +104,7 @@
       }
 
       .contact-button-container {
+        padding-top: 1em;
         display: flex;
         justify-content: center;
         width: 100%;
