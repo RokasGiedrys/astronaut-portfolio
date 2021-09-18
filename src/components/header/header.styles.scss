@@ -7,30 +7,50 @@
   z-index: 10;
   display: flex;
   flex-direction: row;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 1em;
   background: $header-background;
 
+  @include for-size(tablet-landscape) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  @include for-size(tablet-portrait) {
+    padding-left: 2.5em;
+    padding-right: 1.5em;
+  }
   @include for-size(phone-only) {
-    height: 15%;
+    height: 15vh;
+  }
+
+  @include for-size(small-only) {
+    padding-left: 1.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
   }
 
   @include for-size(smallest-only) {
+    padding-left: 0.5em;
     flex-direction: column;
   }
-  .buttons-wrapper {
+  .buttons-container {
     height: 100%;
     width: 20%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 1em;
-    margin-left: 1em;
 
     :first-child {
       margin-right: 1em;
+      @include for-size(tablet-portrait) {
+        margin-right: 0;
+      }
     }
 
     @include for-size(tablet-portrait) {
-      width: 100vw;
+      width: 100%;
       cursor: pointer;
       visibility: visible;
       margin-top: 0;
@@ -40,15 +60,13 @@
 
     @include for-size(smallest-only) {
       justify-content: center;
-      padding: 0;
-      margin: 0;
 
       :first-child {
         margin-right: 0;
       }
     }
-    .soc-button-wrapper {
-      width: 50%;
+    .soc-container {
+      width: 100%;
       display: flex;
       flex-direction: row;
       @include for-size(tablet-portrait) {

@@ -8,8 +8,8 @@ import MobileNavigation from "../mobile-navigation/mobile-navigation.component";
 const Header = () => {
   return (
     <div className='header'>
-      <div className='buttons-wrapper'>
-        <div className='soc-button-wrapper'>
+      <div className='buttons-container'>
+        <div className='soc-container'>
           <Link
             to={{
               pathname: "https://www.linkedin.com/in/rokasgiedrys/",

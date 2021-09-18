@@ -2,44 +2,9 @@
 @import "../../utils/name-variables.scss";
 
 .portfolio-page {
-  .introduction {
-    font-size: 1.75em;
-    color: white;
-    text-align: center;
-    padding: 4em 6em;
-    letter-spacing: 0.1em;
-
-    @include for-size(tablet-landscape) {
-    }
-
-    @include for-size(tablet-portrait) {
-      font-size: 1.25em;
-    }
-
-    @include for-size(phone-only) {
-      padding: 4em 2em;
-      margin-top: 1em;
-    }
-
-    @include for-size(small-only) {
-      font-size: 1em;
-      padding: 6em 2em 4em 2em;
-      margin-top: 0;
-    }
-
-    @include for-size(smallest-only) {
-      font-size: 1em;
-      margin-top: 0;
-    }
-
-    .highlighted {
-      color: $main-color;
-      font-style: italic;
-    }
-  }
-
   height: 100vh;
   width: 100%;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,4 +12,46 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
 
+  @include for-size(phone-only) {
+    padding-top: 15vh;
+  }
+
+  .introduction {
+    width: 100%;
+    font-size: 1.75em;
+    color: white;
+    text-align: center;
+    padding: 0 3em;
+    margin-top: 5em;
+    letter-spacing: 0.1em;
+
+    @include for-size(tablet-landscape) {
+      font-size: 1.25em;
+      padding: 0 2.5em;
+    }
+
+    @include for-size(tablet-portrait) {
+      font-size: 1em;
+    }
+
+    @include for-size(small-only) {
+      padding: 0 1.5em;
+    }
+
+    @include for-size(smallest-only) {
+      font-size: 1em;
+    }
+
+    .highlighted {
+      color: $main-color;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  .projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -19,17 +19,13 @@ button {
       border-radius: 1em;
       border: 1px solid $white-color;
     }
-    &:active {
-      position: relative;
-      top: 2px;
-    }
 
     @include for-size(desktop) {
       font-size: 1.25em;
     }
 
     @include for-size(tablet-landscape) {
-      //font-size: 1.25em;
+      width: 60%;
     }
 
     @include for-size(phone-only) {
@@ -38,6 +34,7 @@ button {
 
     @include for-size(small-only) {
       font-size: 1em;
+      padding: 0.25em;
     }
 
     @include for-size(smallest-only) {
@@ -50,6 +47,8 @@ button {
   }
 
   &.portfolio {
+    width: 50%;
+    margin-top: 0;
     font-size: 1.25em;
     text-decoration: none;
     background-color: transparent;
@@ -57,16 +56,11 @@ button {
     border: 1px solid $main-color;
     display: inline-block;
     cursor: pointer;
-    margin-top: 2em;
     font-weight: 500;
     padding: 0.5em;
 
     &:hover {
       border: 1px solid $white-color;
-    }
-    &:active {
-      position: relative;
-      top: 2px;
     }
 
     @include for-size(tablet-landscape) {

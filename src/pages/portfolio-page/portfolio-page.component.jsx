@@ -17,7 +17,7 @@ const projects = [
     title: "This Portfolio Website",
     images: [portfolio_0, portfolio_1, portfolio_2],
     description:
-      "Personal website built from scratch to showcase my portfolio, print resume and get in touch with me on social media, email and phone. This one-page web app is written in JavaScript using ReactJS with libraries such as React Router for navigation and React Slick to display portfolio project images in carousels. Also, the SASS is used to superpower the CSS, React Icons for beautiful social icons and Git for the version control.",
+      "Personal website built from scratch to showcase my portfolio, print resume and get in touch with me on social media, email and phone. This one-page web app is written in JavaScript using ReactJS with React Router for navigation and React Slick to display portfolio project images in carousels. Also, the SASS is used to superpower the CSS, React Icons for beautiful social icons and Git for the version control.",
     linkUrl: "/",
   },
   {
@@ -49,13 +49,15 @@ const PortfolioPage = () => {
           More coming soon.
         </Link>
       </div>
-      {portfolioProjects.map(({ id, ...otherProps }) =>
-        Math.abs(id % 2) === 1 ? (
-          <PortfolioItem key={id} {...otherProps} />
-        ) : (
-          <PortfolioItem key={id} {...otherProps} reverse />
-        )
-      )}
+      <div className='projects-container'>
+        {portfolioProjects.map(({ id, ...otherProps }) =>
+          Math.abs(id % 2) === 1 ? (
+            <PortfolioItem key={id} {...otherProps} />
+          ) : (
+            <PortfolioItem key={id} {...otherProps} reverse />
+          )
+        )}
+      </div>
     </div>
   );
 };

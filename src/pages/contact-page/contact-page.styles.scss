@@ -4,6 +4,11 @@
 .contact-page {
   background: $main-background-gradient;
   background-size: cover;
+  padding-top: 10vh;
+
+  @include for-size(phone-only) {
+    padding-top: 15vh;
+  }
 
   .contact-page-container {
     height: 90vh;
@@ -12,6 +17,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 3em;
+
+    @include for-size(tablet-landscape) {
+      padding: 2em;
+    }
 
     @include for-size(phone-only) {
       height: 85vh;
@@ -26,26 +36,9 @@
       align-items: center;
 
       .yoga-astronaut {
-        height: 60%;
-        width: 60%;
-        margin-left: 1em;
+        height: 100%;
+        width: 100%;
         animation: fly 5s ease-in-out infinite;
-
-        @include for-size(tablet-portrait) {
-          height: 40%;
-          width: 100%;
-          margin-top: 4em;
-        }
-
-        @include for-size(phone-only) {
-          height: 30%;
-          width: 100%;
-          margin-left: 0;
-        }
-
-        @include for-size(smallest-only) {
-          height: 20vh;
-        }
 
         @keyframes fly {
           0% {
@@ -61,49 +54,50 @@
       }
     }
 
-    .heading {
-      font-size: 2em;
-      color: $white-color;
-      font-weight: 550;
-      letter-spacing: 0.1em;
-      margin-bottom: 1em;
-
-      @include for-size(small-only) {
-        font-size: 1.5em;
-      }
-    }
-
-    .subheading {
-      font-size: 1.5em;
-      line-height: 1.5em;
-      color: $white-color;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      padding: 0 1em;
+    .contacts-container {
+      height: 60%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
       text-align: center;
+      justify-content: center;
 
-      @include for-size(phone-only) {
-        margin-bottom: 1em;
-      }
+      .contact-text {
+        font-size: 1.5em;
+        line-height: 1.5em;
+        color: $white-color;
+        font-weight: 500;
+        letter-spacing: 0.1em;
 
-      @include for-size(small-only) {
-        font-size: 1em;
-      }
-
-      @include for-size(smallest-only) {
-        height: 20vh;
-      }
-
-      .highlighted {
-        color: $main-color;
-
-        &:hover {
-          color: $white-color;
+        @include for-size(large-desktop) {
+          font-size: 3em;
         }
-        &:active {
-          position: relative;
-          top: 2px;
+
+        @include for-size(tablet-landscape) {
+          font-size: 1.25em;
         }
+
+        @include for-size(small-only) {
+          font-size: 1em;
+        }
+
+        .highlighted {
+          color: $main-color;
+
+          &:hover {
+            color: $white-color;
+          }
+          &:active {
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+
+      .contact-button-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
     }
   }

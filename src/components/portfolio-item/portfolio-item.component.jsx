@@ -19,32 +19,34 @@ const PortfolioItem = ({ title, description, images, linkUrl, reverse }) => {
     slidesToScroll: 1,
   };
   return (
-    <div className={`${reverse ? "reverse" : ""} portfolio-item`}>
-      <div className='content-wrapper'>
-        <div className='title-wrapper'>
-          <div className='title'>{title}</div>
+    <div className='portfolio-item'>
+      <div className='portfolio-container'>
+        <div className='text-container'>
+          <div className='title-wrapper'>
+            <div className='title'>{title}</div>
+          </div>
+          <div className='description'>{description}</div>
         </div>
-        <div className='description'>{description}</div>
-        <div className='buttons-wrapper'>
-          <Button
-            title='VISIT PROJECT'
-            portfolio
-            link={linkUrl}
-            target='_blank'
-          />
+        <div className='images-container'>
+          <Slider {...settings}>
+            {images.map((image, idx) => (
+              <img
+                key={idx}
+                src={image}
+                alt='portfolio project'
+                className='image'
+              />
+            ))}
+          </Slider>
         </div>
       </div>
-      <div className='images-wrapper'>
-        <Slider {...settings}>
-          {images.map((image, idx) => (
-            <img
-              key={idx}
-              src={image}
-              alt='portfolio project'
-              className='image'
-            />
-          ))}
-        </Slider>
+      <div className='button-container'>
+        <Button
+          title='VISIT PROJECT'
+          portfolio
+          link={linkUrl}
+          target='_blank'
+        />
       </div>
     </div>
   );
