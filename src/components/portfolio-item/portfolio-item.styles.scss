@@ -110,11 +110,10 @@
         }
 
         @include for-size(desktop) {
-          font-size: 1.25em;
+          font-size: 1em;
         }
 
         @include for-size(tablet-landscape) {
-          font-size: 1em;
           line-height: 1.5em;
         }
 

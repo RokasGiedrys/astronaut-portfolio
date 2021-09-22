@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { GrGithub } from "react-icons/gr";
 import "../portfolio-page/portfolio-page.styles.scss";
 import PortfolioItem from "../../components/portfolio-item/portfolio-item.component";
 
@@ -35,19 +36,9 @@ const PortfolioPage = () => {
   const [portfolioProjects] = useState(projects);
   return (
     <div className='portfolio-page'>
-      <div className='introduction'>
+      <div className='portfolio-page-spacer'>
         A collection of projects built for real-world clients and hobby projects
         created with the latest technologies.
-        <br />
-        <Link
-          className='highlighted'
-          to={{
-            pathname: "https://github.com/RokasGiedrys",
-          }}
-          target='_blank'
-        >
-          More coming soon.
-        </Link>
       </div>
       <div className='projects-container'>
         {portfolioProjects.map(({ id, ...otherProps }) =>
@@ -57,6 +48,16 @@ const PortfolioPage = () => {
             <PortfolioItem key={id} {...otherProps} reverse />
           )
         )}
+      </div>
+      <div className='portfolio-page-spacer'>
+        <Link
+          to={{
+            pathname: "https://github.com/RokasGiedrys",
+          }}
+          target='_blank'
+        >
+          <GrGithub className='github-icon' />
+        </Link>
       </div>
     </div>
   );

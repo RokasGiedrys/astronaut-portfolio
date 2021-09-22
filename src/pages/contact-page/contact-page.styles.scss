@@ -4,14 +4,8 @@
 .contact-page {
   height: 90vh;
   width: 100vw;
-  padding-top: 10vh;
   background: $main-background-gradient;
   background-size: cover;
-
-  @include for-size(phone-only) {
-    height: 85vh;
-    padding-top: 15vh;
-  }
 
   .contact-page-container {
     height: 100%;
@@ -31,6 +25,10 @@
       padding: 1em;
     }
 
+    @include for-size(smallest-only) {
+      padding: 0.75em;
+    }
+
     .astronaut-container {
       height: 40%;
       width: 100%;
@@ -39,6 +37,21 @@
       justify-content: center;
       align-items: center;
       padding: 1em;
+
+      @include for-size(phone-only) {
+        height: 35%;
+        width: 100%;
+      }
+
+      @include for-size(small-only) {
+        height: 30%;
+        width: 100%;
+      }
+
+      @include for-size(smallest-only) {
+        height: 20%;
+        width: 100%;
+      }
 
       .yoga-astronaut {
         height: 100%;
@@ -60,8 +73,6 @@
     }
 
     .contacts-container {
-      //height: 60%;
-      //width: 100%;
       display: flex;
       flex-direction: column;
       text-align: center;
@@ -83,11 +94,15 @@
         }
 
         @include for-size(tablet-portrait) {
-          font-size: 1.25em;
+          font-size: 1em;
         }
 
         @include for-size(small-only) {
           font-size: 1em;
+        }
+
+        @include for-size(smallest-only) {
+          font-size: 0.75em;
         }
 
         .highlighted {
@@ -95,10 +110,6 @@
 
           &:hover {
             color: $white-color;
-          }
-          &:active {
-            position: relative;
-            top: 2px;
           }
         }
       }

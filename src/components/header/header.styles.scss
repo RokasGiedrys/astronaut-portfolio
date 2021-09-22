@@ -1,16 +1,16 @@
 @import "../../utils/name-variables.scss";
 
 .header {
-  height: 10vh;
   width: 100vw;
-  position: absolute;
-  z-index: 10;
+  //position: absolute;
+  //z-index: 10;
   display: flex;
   flex-direction: row;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
   padding-top: 1em;
-  background: $header-background;
+  padding-bottom: 1em;
+  background: $header-background-gradient;
 
   :first-child {
     margin-right: auto;
@@ -21,31 +21,38 @@
   }
 
   @include for-size(tablet-landscape) {
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
   }
 
   @include for-size(tablet-portrait) {
-    padding-left: 2.5em;
-    padding-right: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   @include for-size(phone-only) {
-    height: 15vh;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   @include for-size(small-only) {
-    padding-left: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  @include for-size(smallest-only) {
     padding-right: 0.5em;
-    padding-top: 0;
   }
 
   @include for-size(smallest-only) {
     padding-left: 0.5em;
-    flex-direction: column;
+    padding-top: 0.5em;
+    //flex-direction: column;
   }
   .buttons-container {
     height: 100%;
-    width: 20%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -54,8 +61,12 @@
       margin-right: 1em;
 
       @include for-size(tablet-portrait) {
-        margin-right: 0;
+        //margin-right: 0;
         flex-direction: column;
+      }
+
+      @include for-size(small-only) {
+        margin-right: 0;
       }
     }
 
@@ -80,9 +91,10 @@
       flex-direction: row;
       margin-right: auto;
 
-      @include for-size(tablet-portrait) {
+      @include for-size(small-only) {
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        justify-content: space-around;
       }
 
       @include for-size(smallest-only) {
@@ -91,8 +103,8 @@
       }
     }
     .soc-button {
-      height: 2em;
-      width: 2em;
+      height: 1.5em;
+      width: 1.5em;
       cursor: pointer;
       color: $main-color;
       font-weight: 400;
@@ -104,16 +116,6 @@
       @include for-size(tablet-landscape) {
         height: 1em;
         width: 1em;
-      }
-
-      @include for-size(tablet-portrait) {
-        height: 1.5em;
-        width: 1.5em;
-      }
-
-      @include for-size(phone-only) {
-        height: 1.5em;
-        width: 1.5em;
       }
 
       @include for-size(small-only) {

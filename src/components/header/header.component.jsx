@@ -1,9 +1,8 @@
 import React from "react";
 import "../header/header.styles.scss";
 import { Link } from "react-router-dom";
-import { GrLinkedinOption, GrGithub } from "react-icons/gr";
+import { GrLinkedinOption } from "react-icons/gr";
 import Navigation from "../navigation/navigation.component";
-import MobileNavigation from "../mobile-navigation/mobile-navigation.component";
 
 const Header = () => {
   return (
@@ -18,16 +17,7 @@ const Header = () => {
           >
             <GrLinkedinOption className='soc-button' />
           </Link>
-          <Link
-            to={{
-              pathname: "https://github.com/RokasGiedrys",
-            }}
-            target='_blank'
-          >
-            <GrGithub className='soc-button' />
-          </Link>
         </div>
-        <MobileNavigation />
       </div>
       <Navigation />
     </div>

@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const PortfolioItem = ({ title, description, images, linkUrl, reverse }) => {
+const PortfolioItem = ({ title, description, images, linkUrl }) => {
   const settings = {
     dots: false,
     fade: true,
@@ -18,6 +18,8 @@ const PortfolioItem = ({ title, description, images, linkUrl, reverse }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+  
   return (
     <div className='portfolio-item'>
       <div className='portfolio-container'>
