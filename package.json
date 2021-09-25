@@ -1,5 +1,5 @@
 {
-  "homepage": "https://rokasgiedrys.github.io/astronaut-portfolio/",
+  "homepage": "https://rokasgiedrys.github.io/astronaut-portfolio",
   "name": "rokas-giedrys-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^12.8.3",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
+    "react-cool-img": "^1.2.12",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router": "^5.2.0",

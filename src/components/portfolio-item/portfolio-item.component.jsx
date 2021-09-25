@@ -4,6 +4,7 @@ import "../portfolio-item/portfolio-item.styles.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Img from "react-cool-img";
 
 const PortfolioItem = ({ title, description, images, linkUrl }) => {
   const settings = {
@@ -19,7 +20,6 @@ const PortfolioItem = ({ title, description, images, linkUrl }) => {
     slidesToScroll: 1,
   };
 
-  
   return (
     <div className='portfolio-item'>
       <div className='portfolio-container'>
@@ -32,7 +32,7 @@ const PortfolioItem = ({ title, description, images, linkUrl }) => {
         <div className='images-container'>
           <Slider {...settings}>
             {images.map((image, idx) => (
-              <img
+              <Img
                 key={idx}
                 src={image}
                 alt='portfolio project'
