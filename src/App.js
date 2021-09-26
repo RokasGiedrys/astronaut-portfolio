@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path='/' component={HomePage} />
+        <Route exact path='/astronaut-portfolio' component={HomePage} />
         <Route exact path='/portfolio' component={PortfolioPage} />
         <Route exact path='/contact' component={ContactPage} />
       </Switch>
