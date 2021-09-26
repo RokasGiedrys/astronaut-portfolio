@@ -4,7 +4,12 @@ import "../navigation/navigation.styles.scss";
 
 const Navigation = () => (
   <div className='options'>
-    <NavLink exact to='/' className='option' activeClassName='selected'>
+    <NavLink
+      exact
+      to='/astronaut-portfolio'
+      className='option'
+      activeClassName='selected'
+    >
       HOME
     </NavLink>
     <NavLink
