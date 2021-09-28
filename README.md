@@ -1,4 +1,4 @@
-# This project is the source code for my portfolio website built with React
+# This project is the source code for my playground with React Create App.
 
 ## Built with
 - React - The web framework used
