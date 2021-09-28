@@ -1,6 +1,6 @@
 # Astronaut Portfolio React App
 
-This project is a sandbox for me on which I do not avoid to commit changes. For this reason, there is loads of commits for almost every change. 
+The Project is built from scratch to showcase my portfolio, print resume and get in touch with me on social media, email and phone. Its CSS is quite complicated with many unnecessary breakpoints for loads of different screens. This is done because this project is a sandbox for me on which I do not avoid committing changes. For this reason, there are loads of commits for almost every change.
 
 ## Built with
 - React - The web framework used
