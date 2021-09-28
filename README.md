@@ -1,6 +1,6 @@
 # Astronaut Portfolio React App
 
-This is a project is a sandbox for me on which I do not avoid to commit changes. For this reason, there is loads of commits for almost every change. 
+This project is a sandbox for me on which I do not avoid to commit changes. For this reason, there is loads of commits for almost every change. 
 
 ## Built with
 - React - The web framework used
