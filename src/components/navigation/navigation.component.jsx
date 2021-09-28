@@ -5,13 +5,23 @@ import "../navigation/navigation.styles.scss";
 const Navigation = () => {
   return (
     <div className='options'>
-      <NavLink to='/' className='option' activeClassName='selected'>
+      <NavLink exact to='/' className='option' activeClassName='selected'>
         HOME
       </NavLink>
-      <NavLink to='/portfolio' className='option' activeClassName='selected'>
+      <NavLink
+        exact
+        to='/portfolio'
+        className='option'
+        activeClassName='selected'
+      >
         PORTFOLIO
       </NavLink>
-      <NavLink to='/contact' className='option' activeClassName='selected'>
+      <NavLink
+        exact
+        to='/contact'
+        className='option'
+        activeClassName='selected'
+      >
         CONTACT
       </NavLink>
     </div>

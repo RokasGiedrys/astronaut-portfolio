@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import Header from "./components/header/header.component";
 import HomePage from "./pages/home-page/home-page.component";
 import PortfolioPage from "./pages/portfolio-page/portfolio-page.component";
